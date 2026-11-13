@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Software engineering portfolio focused on C#, .NET, REST APIs, and SQL Server.">
+  <title>Angela McPeters | .NET Backend Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home">DEV<span>.</span>PORTFOLIO</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#experience">Experience</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">SOFTWARE ENGINEERING PORTFOLIO</p>
+        <h1>Building reliable<br><span>backend solutions.</span></h1>
+        <p class="hero-lede">I'm Angela McPeters, a software professional focused on C#, .NET, REST APIs, and data-driven applications. I combine enterprise technology experience with a practical, problem-solving mindset.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my projects</a>
+          <a class="button button-secondary" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-meta"><span class="status-dot"></span> Open to .NET backend opportunities</div>
+      </div>
+      <div class="code-card" aria-label="Example C sharp API endpoint">
+        <div class="code-card-top"><span></span><span></span><span></span><small>EmployeesController.cs</small></div>
+        <pre><code><span class="code-purple">[ApiController]</span>
+<span class="code-purple">[Route</span>(<span class="code-green">"api/[controller]"</span>)<span class="code-purple">]</span>
+<span class="code-blue">public class</span> EmployeesController : ControllerBase
+{
+  <span class="code-blue">private readonly</span> IEmployeeService _service;
+
+  <span class="code-blue">public async</span> Task&lt;IActionResult&gt; Get()
+  {
+    <span class="code-blue">var</span> employees =
+      <span class="code-blue">await</span> _service.GetAllAsync();
+
+    <span class="code-blue">return</span> Ok(employees);
+  }
+}</code></pre>
+        <div class="code-card-footer"><span>● REST API</span><span>ASP.NET Core</span><span>C#</span></div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Experience meets continuous learning.</h2></div>
+      <div class="about-grid">
+        <p class="about-lede">I bring a broad technology background and a commitment to building maintainable software that solves real business problems.</p>
+        <div class="about-detail">
+          <p>My experience spans software development and Microsoft business platforms, including SharePoint, Microsoft 365, Power Platform, and SQL Server. I'm currently sharpening my modern .NET backend skills through hands-on projects in API design, data access, testing, and deployment.</p>
+          <p>I’m also completing an MBA, which strengthens the way I connect technical decisions to business goals, users, and outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">TECHNICAL TOOLKIT</p><h2>Tools I work with.</h2></div>
+        <div class="skills-grid">
+          <article class="skill-card"><h3>Backend development</h3><p>C# · .NET · ASP.NET Core · Web API · REST · Entity Framework Core</p></article>
+          <article class="skill-card"><h3>Data</h3><p>SQL Server · T-SQL · Relational modeling · Data access</p></article>
+          <article class="skill-card"><h3>Microsoft platform</h3><p>Microsoft 365 · SharePoint · Power Apps · Power Automate · Power BI · Dataverse</p></article>
+          <article class="skill-card"><h3>Engineering practices</h3><p>Git · GitHub · Debugging · API documentation · Unit testing · CI/CD fundamentals</p></article>
+        </div>
+        <p class="small-note">Keep this list accurate: remove technologies you have not used or studied enough to discuss confidently.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Projects that demonstrate how I build.</h2><p class="section-intro">These are portfolio project starting points. Replace each description and repository link with your completed work as you build it.</p></div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-number">01 / API DEVELOPMENT</div><h3>Employee Management API</h3>
+          <p>A RESTful API for employee records with validation, structured endpoints, and SQL Server persistence.</p>
+          <div class="tag-list"><span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span></div>
+          <span class="project-status">Planned project</span>
+        </article>
+        <article class="project-card">
+          <div class="project-number">02 / APPLICATION DEVELOPMENT</div><h3>Task Management Service</h3>
+          <p>A backend service for creating, assigning, updating, and tracking tasks, with filtering and status workflows.</p>
+          <div class="tag-list"><span>.NET</span><span>REST API</span><span>SQL Server</span></div>
+          <span class="project-status">Planned project</span>
+        </article>
+        <article class="project-card">
+          <div class="project-number">03 / DATA & REPORTING</div><h3>Business Insights Dashboard</h3>
+          <p>A reporting solution that transforms relational data into useful operational metrics and visual insights.</p>
+          <div class="tag-list"><span>SQL</span><span>Power BI</span><span>Data modeling</span></div>
+          <span class="project-status">Planned project</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="experience">
+      <div class="container experience-wrap">
+        <div class="section-heading"><p class="eyebrow">PROFESSIONAL BACKGROUND</p><h2>Technology experience with a business perspective.</h2></div>
+        <div class="experience-item"><div class="timeline-mark"></div><div><h3>Software & Microsoft Platform Experience</h3><p class="muted">Enterprise technology · 25 years of experience</p><p>Experience across software development and Microsoft technologies, including SharePoint, Microsoft 365, Power Platform, and SQL Server. Add specific roles, employers, dates, and measurable accomplishments from your resume here.</p></div></div>
+        <div class="experience-item"><div class="timeline-mark"></div><div><h3>Master of Business Administration</h3><p class="muted">Indiana Wesleyan University</p><p>MBA studies supporting a broader understanding of strategy, operations, finance, and business decision-making.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <p class="eyebrow">LET'S CONNECT</p><h2>Have a backend challenge in mind?</h2>
+      <p>I'm interested in discussing .NET backend development opportunities and projects.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="mailto:angela.mcpeters@gmail.com">Email me</a>
+        <a class="button button-secondary" href="https://www.linkedin.com/in/angela-mcpeters-98aa6a4/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-secondary" href="https://github.com/ammcpeters" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <p class="small-note">Before publishing, replace the placeholder email, LinkedIn URL, GitHub username, and name.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> Angela McPeters</span><span>Designed and built with HTML, CSS & JavaScript.</span></div></footer>
+</body>
+</html>
